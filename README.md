@@ -1,7 +1,7 @@
 # delta-generation-service
 
 Generate delta files based on `new-insert-triples.ttl` and `to-remove-triples.ttl` file produced by the diff service.
-Delete's and Insert's are in separate files (we don't merge both for performance reason).
+Deletes and Inserts are in separate files (we don't merge both for performance reason).
 We first produce delete delta files, so that consumers can first delete outdated triples before inserting new ones.
 
 ## Usage
