@@ -8,7 +8,7 @@ We first produce delete delta files, so that consumers can first delete outdated
 
 ```yml
   harvest_gen_delta:
-   image: lblod/delta-generation-service
+   image: lblod/harvesting-generation-delta-service
    environment:
      BUFFER_SIZE: "100"
    volumes:
