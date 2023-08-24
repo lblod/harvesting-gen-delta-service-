@@ -32,3 +32,6 @@ export const TARGET_DIRECTORY_DELTA_PATH = process.env.TARGET_DIRECTORY_DELTA_PA
 if (!existsSync(TARGET_DIRECTORY_DELTA_PATH)) {
   mkdirSync(TARGET_DIRECTORY_DELTA_PATH);
 }
+
+export const BUFFER_SIZE = parseInt(process.env.BUFFER_SIZE || "10");
+console.log("buffer size: ", BUFFER_SIZE);
