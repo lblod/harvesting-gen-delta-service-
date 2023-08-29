@@ -20,5 +20,5 @@ We first produce delete delta files, so that consumers can first delete outdated
 `BUFFER_SIZE: "10"`
 
 `TARGET_DIRECTORY_DELTA_PATH: "/share/delta-generation"`
-
+`PUBLISHER_URI: "http://data.lblod.info/services/harvesting-delta-generation-service"`
 

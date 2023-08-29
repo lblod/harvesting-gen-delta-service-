@@ -34,4 +34,5 @@ if (!existsSync(TARGET_DIRECTORY_DELTA_PATH)) {
 }
 
 export const BUFFER_SIZE = parseInt(process.env.BUFFER_SIZE || "10");
+export const PUBLISHER_URI = process.env.PUBLISHER_URI || "http://data.lblod.info/services/harvesting-delta-generation-service"
 console.log("buffer size: ", BUFFER_SIZE);
