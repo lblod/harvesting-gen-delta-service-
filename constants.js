@@ -35,4 +35,5 @@ if (!existsSync(TARGET_DIRECTORY_DELTA_PATH)) {
 
 export const BUFFER_SIZE = parseInt(process.env.BUFFER_SIZE || "10");
 export const PUBLISHER_URI = process.env.PUBLISHER_URI || "http://data.lblod.info/services/harvesting-delta-generation-service"
+export const TARGET_PUBLISHER_GRAPH = process.env.TARGET_PUBLISHER_GRAPH || "http://redpencil.data.gift/id/deltas/producer/lblod-harvester-besluiten-producer";
 console.log("buffer size: ", BUFFER_SIZE);
