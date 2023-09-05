@@ -30,7 +30,7 @@ export const TARGET_DELTA_GRAPH = process.env.TARGET_DELTA_GRAPH || 'http://mu.s
 export const TARGET_DIRECTORY_DELTA_PATH = process.env.TARGET_DIRECTORY_DELTA_PATH || "/share/delta-generation";
 
 if (!existsSync(TARGET_DIRECTORY_DELTA_PATH)) {
-  mkdirSync(TARGET_DIRECTORY_DELTA_PATH);
+  mkdirSync(TARGET_DIRECTORY_DELTA_PATH, { recursive: true });
 }
 
 export const BUFFER_SIZE = parseInt(process.env.BUFFER_SIZE || "10");
