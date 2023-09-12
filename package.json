@@ -1,6 +1,6 @@
 {
   "name": "delta-generation-service",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Microservice that generates delta based on a ttl input file",
   "repository": {
     "type": "git",
