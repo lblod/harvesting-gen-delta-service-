@@ -49,3 +49,6 @@ export const TARGET_PUBLISHER_GRAPH =
   process.env.TARGET_PUBLISHER_GRAPH ||
   "http://redpencil.data.gift/id/deltas/producer/lblod-harvester-besluiten-producer";
 console.log("buffer size: ", BUFFER_SIZE);
+
+export const DEFAULT_GRAPH =
+  process.env.DEFAULT_GRAPH || "http://mu.semte.ch/graphs/harvesting";
