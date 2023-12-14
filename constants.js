@@ -1,15 +1,20 @@
-import { mkdirSync, existsSync } from 'fs';
-export const TASK_GENERATING_DELTA = 'http://lblod.data.gift/id/jobs/concept/TaskOperation/generatingDelta';
+import { mkdirSync, existsSync } from "fs";
+export const TASK_GENERATING_DELTA =
+  "http://lblod.data.gift/id/jobs/concept/TaskOperation/generatingDelta";
 
-export const STATUS_BUSY = 'http://redpencil.data.gift/id/concept/JobStatus/busy';
-export const STATUS_SCHEDULED = 'http://redpencil.data.gift/id/concept/JobStatus/scheduled';
-export const STATUS_SUCCESS = 'http://redpencil.data.gift/id/concept/JobStatus/success';
-export const STATUS_FAILED = 'http://redpencil.data.gift/id/concept/JobStatus/failed';
+export const STATUS_BUSY =
+  "http://redpencil.data.gift/id/concept/JobStatus/busy";
+export const STATUS_SCHEDULED =
+  "http://redpencil.data.gift/id/concept/JobStatus/scheduled";
+export const STATUS_SUCCESS =
+  "http://redpencil.data.gift/id/concept/JobStatus/success";
+export const STATUS_FAILED =
+  "http://redpencil.data.gift/id/concept/JobStatus/failed";
 
-export const JOB_TYPE = 'http://vocab.deri.ie/cogs#Job';
-export const TASK_TYPE = 'http://redpencil.data.gift/vocabularies/tasks/Task';
-export const ERROR_TYPE = 'http://open-services.net/ns/core#Error';
-export const ERROR_URI_PREFIX = 'http://redpencil.data.gift/id/jobs/error/';
+export const JOB_TYPE = "http://vocab.deri.ie/cogs#Job";
+export const TASK_TYPE = "http://redpencil.data.gift/vocabularies/tasks/Task";
+export const ERROR_TYPE = "http://open-services.net/ns/core#Error";
+export const ERROR_URI_PREFIX = "http://redpencil.data.gift/id/jobs/error/";
 
 export const PREFIXES = `
   PREFIX harvesting: <http://lblod.data.gift/vocabularies/harvesting/>
@@ -25,15 +30,25 @@ export const PREFIXES = `
   PREFIX adms: <http://www.w3.org/ns/adms#>
 `;
 
-export const HIGH_LOAD_DATABASE_ENDPOINT = process.env.HIGH_LOAD_DATABASE_ENDPOINT || 'http://database:8890/sparql';
-export const TARGET_DELTA_GRAPH = process.env.TARGET_DELTA_GRAPH || 'http://mu.semte.ch/graphs/public';
-export const TARGET_DIRECTORY_DELTA_PATH = process.env.TARGET_DIRECTORY_DELTA_PATH || "/share/delta-generation";
+export const HIGH_LOAD_DATABASE_ENDPOINT =
+  process.env.HIGH_LOAD_DATABASE_ENDPOINT || "http://database:8890/sparql";
+export const TARGET_DELTA_GRAPH =
+  process.env.TARGET_DELTA_GRAPH || "http://mu.semte.ch/graphs/public";
+export const TARGET_DIRECTORY_DELTA_PATH =
+  process.env.TARGET_DIRECTORY_DELTA_PATH || "/share/delta-generation";
 
 if (!existsSync(TARGET_DIRECTORY_DELTA_PATH)) {
   mkdirSync(TARGET_DIRECTORY_DELTA_PATH, { recursive: true });
 }
 
 export const BUFFER_SIZE = parseInt(process.env.BUFFER_SIZE || "10");
-export const PUBLISHER_URI = process.env.PUBLISHER_URI || "http://data.lblod.info/services/harvesting-delta-generation-service"
-export const TARGET_PUBLISHER_GRAPH = process.env.TARGET_PUBLISHER_GRAPH || "http://redpencil.data.gift/id/deltas/producer/lblod-harvester-besluiten-producer";
+export const PUBLISHER_URI =
+  process.env.PUBLISHER_URI ||
+  "http://data.lblod.info/services/harvesting-delta-generation-service";
+export const TARGET_PUBLISHER_GRAPH =
+  process.env.TARGET_PUBLISHER_GRAPH ||
+  "http://redpencil.data.gift/id/deltas/producer/lblod-harvester-besluiten-producer";
 console.log("buffer size: ", BUFFER_SIZE);
+
+export const DEFAULT_GRAPH =
+  process.env.DEFAULT_GRAPH || "http://mu.semte.ch/graphs/harvesting";
